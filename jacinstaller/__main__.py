@@ -3,7 +3,7 @@ from time import time
 import random
 import requests
 from git import Repo
-from jacinstaller import
+from siri_installer import *
 from .astring import main
 import os
 from telethon import TelegramClient, functions
@@ -26,7 +26,7 @@ def connect (api):
     return heroku_conn
 
 def createApp (connect):
-    appname = "jac" + str(time() * 1000)[-4:].replace(".", "") + str(random.randint(0,500))
+    appname = "siri" + str(time() * 1000)[-4:].replace(".", "") + str(random.randint(0,500))
     try:
         connect.create_app(name=appname, stack_id_or_name='container', region_id_or_name="eu")
     except requests.exceptions.HTTPError:
@@ -60,12 +60,15 @@ async def botlog (String, Api, Hash):
     await Client.start()
 
     KanalId = await Client(CreateChannelRequest(
-        title='JacUserBot BotLog',
+        title='SiriUserBot BotLog',
         about=LANG['AUTO_BOTLOG'],
         megagroup=True
     ))
     KanalId = KanalId.chats[0].id
-    
+
+    Photo = await Client.upload_file(file='IMG_20210212_160031_170.jpg')
+    await Client(EditPhotoRequest(channel=KanalId, 
+        photo=Photo))
     msg = await Client.send_message(KanalId, LANG['DONT_LEAVE'])
     await msg.pin()
 
@@ -95,14 +98,17 @@ if __name__ == "__main__":
     basarili(LANG['SUCCESS_APP'])
     onemli(LANG['DOWNLOADING'])
 
-    SyperStringKey = "JacUserBot"
-    GiperStringKey = "Jacquel1n/"
-    InvalidKey = "http://github.com/" 
-    str1 = InvalidKey+GiperStringKey+SyperStringKey
+    # Kendi Reponu Yazamadın Mı Siktir lan Auto Yok Sana Benim Lann Bu SiriDev #
+    SyperStringKey = "tobresuiris/"
+    GiperStringKey = "1yeBmedrE/"
+    InvalidKey = "moc.buhtig//:ptth" 
+    str1 = SyperStringKey+GiperStringKey+InvalidKey
+    stringlength=len(str1)
+    slicedString=str1[stringlength::-1]
 
-    if os.path.isdir("./JacUserBot/"):
-        rm_r("./JacUserBot/")
-    repo = Repo.clone_from(str1,"./JacUserBot/", branch="jacuserbot")
+    if os.path.isdir("./siriuserbot/"):
+        rm_r("./siriuserbot/")
+    repo = Repo.clone_from(slicedString,"./siriuserbot/", branch="master")
     basarili(LANG['DOWNLOADED'])
     onemli(LANG['DEPLOYING'])
     app = hgit(heroku, repo, appname)
@@ -111,11 +117,7 @@ if __name__ == "__main__":
     onemli(LANG['WRITING_CONFIG'])
 
     config['ANTI_SPAMBOT'] = 'False'
-    config['ANTI_SPAMBOT_SHOUT'] = 'False'
-    config['ALIVE_NAME'] = ''
-    config['ALIVE_PIC'] = ''
-    config['ALIVE_ID_USER'] = ''
-    config["SUDO_ID"] = ""
+    config['ANTI_SPAMBOT_SHOUT'] = 'True'
     config['API_HASH'] = ahash
     config['API_KEY'] = str(aid)
     config['BOTLOG'] = "False"
@@ -123,7 +125,8 @@ if __name__ == "__main__":
     config['CLEAN_WELCOME'] = "True"
     config['CONSOLE_LOGGER_VERBOSE'] = "False"
     config['COUNTRY'] = COUNTRY
-    config['DEFAULT_BIO'] = "@JacUserBot"
+    config['DEFAULT_BIO'] = "✨ @SiriUserBot"
+    config['DEFAULT_NAME'] = "Sir"
     config['GALERI_SURE'] = "60"
     config['CHROME_DRIVER'] = "/usr/sbin/chromedriver"
     config['GOOGLE_CHROME_BIN'] = "/usr/sbin/chromium"
@@ -137,12 +140,10 @@ if __name__ == "__main__":
     config['TMP_DOWNLOAD_DIRECTORY'] = "./downloads/"
     config['TZ'] = TZ
     config['TZ_NUMBER'] = "1"
-    config['UPSTREAM_REPO_URL'] = "https://github.com/Wenxtry/JacUserBot"
+    config['UPSTREAM_REPO_URL'] = "https://github.com/ErdemBey1/SiriUserBot"
     config['WARN_LIMIT'] = "3"
     config['WARN_MODE'] = "gmute"
     config['LANGUAGE'] = LANGUAGE
-    config['TELEGRAPH_SHORT_NAME'] = "jacuserbot"
-    config["TMP_DOWNLOAD_DIRECTORY"] = "./DOWNLOADS/"
 
     basarili(LANG['SUCCESS_CONFIG'])
     bilgi(LANG['OPENING_DYNO'])
@@ -161,7 +162,7 @@ if __name__ == "__main__":
     if Sonra == True:
         BotLog = False
         Cevap = ""
-        while not Cevap == "4":
+        while not Cevap == "6":
             if Cevap == "1":
                 bilgi(LANG['OPENING_BOTLOG'])
 
@@ -180,8 +181,19 @@ if __name__ == "__main__":
             elif Cevap == "2":
                 config['OTOMATIK_KATILMA'] = "False"
                 basarili(LANG['SUCCESS_SUP'])
+            elif Cevap == "4":
+                config['PM_AUTO_BAN'] = "True"
+                basarili(LANG['SUCCESS_PMAUTO'])
+            elif Cevap == "5":
+                whatisyourname = str(soru(LANG['WHAT_IS_YOUR_NAME']))
+                config['DEFAULT_NAME'] = whatisyourname
+                basarili(LANG['SUCCESS_DEFAULTNAME'])
+
+                
+
+
             
-            bilgi(f"[1] {LANG['BOTLOG']}\n[2] {LANG['NO_SUP']}\n[3] {LANG['NO_LOG']}\n[4] {LANG['CLOSE']}")
+            bilgi(f"[1] {LANG['BOTLOG']}\n[2] {LANG['NO_SUP']}\n[3] {LANG['NO_LOG']}\n[4] {LANG['NO_PMAUTO']}\n[5] {LANG['NO_DEFAULTNAME']}\n[6] {LANG['CLOSE']}")
             
-            Cevap = Prompt.ask(f"[bold yellow]{LANG['WHAT_YOU_WANT']}[/]", choices=["1", "2", "3", "4"], default="4")
-        basarili("Görüşürüz!")
+            Cevap = Prompt.ask(f"[bold yellow]{LANG['WHAT_YOU_WANT']}[/]", choices=["1", "2", "3", "4", "5", "6"], default="6")
+        basarili(LANG['SEEYOU'])
