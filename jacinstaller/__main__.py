@@ -3,7 +3,7 @@ from time import time
 import random
 import requests
 from git import Repo
-from jac_installer import
+from jacinstaller import
 from .astring import main
 import os
 from telethon import TelegramClient, functions
