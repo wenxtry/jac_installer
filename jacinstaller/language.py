@@ -28,4 +28,4 @@ def importlang ():
     return COUNTRY, LANGUAGE, TZ
 
 COUNTRY, LANGUAGE, TZ = importlang()
-LANG = loads(open(f"./siri_installer/language/{LANGUAGE}.sirijson", "r").read())["STRINGS"]
+LANG = loads(open(f"./jac_installer/language/{LANGUAGE}.jacjson", "r").read())["STRINGS"]

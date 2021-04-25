@@ -1,8 +1,8 @@
 {
-    "__SIRIJSON__": true,
+    "__JACJSON__": true,
     "LANGUAGE": "Uzbekcha",
     "LANGCODE": "UZ",
-    "AUTHOR": "Siri Userbot",
+    "AUTHOR": "Jacquel1n",
     "STRINGS": {
         "MAIN": {
             "INVALID_KEY": "(!) API kaliti noto'g'ri.",
@@ -13,8 +13,8 @@
             "SUCCESS_STRING": "(✓) StringSession qabul qilindi!",
             "CREATING_APP": "(i) Dastur yaratilmoqda...",
             "SUCCESS_APP": "(✓) Ilova yaratish muvaffaqiyatli bo'ldi!",
-            "DOWNLOADING": "(i) SiriUserBot yuklab olinmoqda...",
-            "DOWNLOADED": "(✓) SiriUserBot-ni yuklab olish muvaffaqiyatli bo'ldi!",
+            "DOWNLOADING": "(i) jacuserbot yuklab olinmoqda...",
+            "DOWNLOADED": "(✓) jacuserbot-ni yuklab olish muvaffaqiyatli bo'ldi!",
             "DEPLOYING": "(i) Deploy boshlash... (Bu jarayon uzoq davom etishi mumkin)",
             "WRITING_CONFIG": "(i) Ma'lumotlar yozilmoqda...",
             "SET_LANG": "(✓) Bot endi {} tilida!",
@@ -28,7 +28,7 @@
             "ERROR": "Xatolik yuz berdi! Xato:",
             "POSTGRE": "(i) PostgreSql yuklanmoqda...",
             "SUCCESS_POSTGRE": "(✓) PostgreSql o'rnatildi!",
-            "AUTO_BOTLOG": "O'rnatishdan keyingi bosqichda @SiriUserBot yordamida ushbu guruh avtomatik ravishda yaratilgan.",
+            "AUTO_BOTLOG": "O'rnatishdan keyingi bosqichda @jacuserbot yordamida ushbu guruh avtomatik ravishda yaratilgan.",
             "DONT_LEAVE": "**Iltimos, ushbu guruhdan chiqmang!**",
             "AFTER_INSTALL": "O'rnatishdan keyin boshlashni xohlaysizmi?",
             "BOTLOG": "BotLog guruhini yarating",
