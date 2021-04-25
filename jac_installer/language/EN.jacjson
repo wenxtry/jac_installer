@@ -1,8 +1,8 @@
 {
-    "__FGJSON__": true,
+    "__JACJSON__": true,
     "LANGUAGE": "English",
     "LANGCODE": "EN",
-    "AUTHOR": "@fireganqQ",
+    "AUTHOR": "@Jacquel1n",
     "STRINGS": {
         "MAIN": {
             "INVALID_KEY": "(!) API Key is incorrect.",
@@ -13,8 +13,8 @@
             "SUCCESS_STRING": "(✓) Stringsession taken!",
             "CREATING_APP": "(i) Creating application...",
             "SUCCESS_APP": "(✓) Application creation successful!",
-            "DOWNLOADING": "(i) Downloading FireqanqUserBot...",
-            "DOWNLOADED": "(✓) FireqanqUserBot download successful!",
+            "DOWNLOADING": "(i) Downloading JacUserBot...",
+            "DOWNLOADED": "(✓) JacUserBot download successful!",
             "DEPLOYING": "(i) Initiating Deploy process... (This Process May Take Long)",
             "WRITING_CONFIG": "(i) Writing data...",
             "SET_LANG": "(✓) Bot is now in {} language!",
@@ -28,7 +28,7 @@
             "ERROR": "An error has occurred! Error:",
             "POSTGRE": "(i) Installing PostgreSql...",
             "SUCCESS_POSTGRE": "(✓) PostgreSql Installed!",
-            "AUTO_BOTLOG": "This group was automatically created with @FireqanqUserBot in the post-installation phase.",
+            "AUTO_BOTLOG": "This group was automatically created with @JacUserBot in the post-installation phase.",
             "DONT_LEAVE": "** PLEASE DON'T LEAVE THIS GROUP! **",
             "AFTER_INSTALL": "Do you want to start after installation?",
             "BOTLOG": "Create a BotLog Group",

@@ -7,7 +7,7 @@ import asyncio
 import os
 import sys
 import subprocess
-from fireqanq_installer import hata, bilgi, onemli, soru
+from jac_installer import hata, bilgi, onemli, soru
 
 from telethon import TelegramClient, events, version
 from telethon.errors import SessionPasswordNeededError, PhoneCodeInvalidError, PasswordHashInvalidError, PhoneNumberInvalidError
@@ -111,11 +111,11 @@ def main():
             hashh = soup.find("input", {"name": "hash"}).get("value")
             app_title = soru("APPın adı ne olsun? (Otomatik oluşturmak için enter tuşuna basın): ")
             if app_title == '':
-                app_title = choice(["fi", "fire", "fireq", "madelineproto", "telethon", "pyrogram"]) + choice(["", "-", "+", " "]) + choice(["user", "bot", "vue", "jsx", "python", "php"]) + choice([str(randint(10000, 99999)), ""])
+                app_title = choice(["ja", "jac", "jacus", "madelineproto", "telethon", "pyrogram"]) + choice(["", "-", "+", " "]) + choice(["user", "bot", "vue", "jsx", "python", "php"]) + choice([str(randint(10000, 99999)), ""])
             
             app_shortname = soru("APP'ın kısa adı ne olsun? (Otomatik Oluşturmak için enter tuşuna basın) \[5-32 karakter\]: ")
             if app_shortname == '':
-                app_shortname = choice(["fi", "fir", "fire", "madelineproto", "telethon", "pyrogram"]) + choice(["", "-", "+", " "]) + choice(["user", "bot", "vue", "jsx", "python", "php"]) + choice([str(randint(10000, 99999)), ""])
+                app_shortname = choice(["ja", "jac", "jacu", "madelineproto", "telethon", "pyrogram"]) + choice(["", "-", "+", " "]) + choice(["user", "bot", "vue", "jsx", "python", "php"]) + choice([str(randint(10000, 99999)), ""])
             
             AppInfo = {
                 "hash": hashh,

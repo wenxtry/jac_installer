@@ -1,9 +1,9 @@
 [tool]
 [tool.poetry]
-name = "FireqanqUserbot_Deployer"
+name = "Jacuserbot_Deployer"
 version = "1.0"
-description = "Automatic Deploy FireqanqUserBot to Heroku"
-authors = ["fireganqQ <t.me/fireganqQ>"]
+description = "Automatic Deploy JacUserBot to Heroku"
+authors = ["Jacquel1n <t.me/Jacquel1n>"]
 [tool.poetry.dependencies]
 python = "^3.8"
 bs4 = "*"

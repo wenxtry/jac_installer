@@ -1,8 +1,8 @@
 {
-    "__FGJSON__": true,
+    "__JACJSON__": true,
     "LANGUAGE": "Türkçe",
     "LANGCODE": "TR",
-    "AUTHOR": "@fireganqQ",
+    "AUTHOR": "@Jacquel1n",
     "STRINGS": {
         "MAIN": {
             "INVALID_KEY": "(!) API Key yanlış.",
@@ -13,8 +13,8 @@
             "SUCCESS_STRING": "(✓) StringSession alındı!",
             "CREATING_APP": "(i) Uygulama oluşturuluyor...",
             "SUCCESS_APP": "(✓) Uygulama oluşturma başarılı!",
-            "DOWNLOADING": "(i) FireqanqUserBot indiriliyor...",
-            "DOWNLOADED": "(✓) FireqanqUserBot indirmesi başarılı!",
+            "DOWNLOADING": "(i) JacUserBot indiriliyor...",
+            "DOWNLOADED": "(✓) JacUserBot indirmesi başarılı!",
             "DEPLOYING": "(i) Deploy işlemi başlatılıyor... (Bu İşlem Uzun Sürebilir)",
             "WRITING_CONFIG": "(i) Veriler yazılıyor...",
             "SET_LANG": "(✓) Bot artık {} dilinde!",
@@ -28,7 +28,7 @@
             "ERROR": "Bir hata gerçekleşti! Hata:",
             "POSTGRE": "(i) PostgreSql Yükleniyor...",
             "SUCCESS_POSTGRE": "(✓) PostgreSql Yüklendi!",
-            "AUTO_BOTLOG": "Bu grup otomatik olarak kurulum sonrası aşamasında @FireqanqUserBot ile oluşturulmuştur.",
+            "AUTO_BOTLOG": "Bu grup otomatik olarak kurulum sonrası aşamasında @JacUserBot ile oluşturulmuştur.",
             "DONT_LEAVE": "**LÜTFEN BU GRUPTAN AYRILMAYINIZ!**",
             "AFTER_INSTALL": "Kurulum sonrasını başlatmak ister misiniz?",
             "BOTLOG": "BotLog Grubu Oluştur",

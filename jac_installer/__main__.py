@@ -3,7 +3,7 @@ from time import time
 import random
 import requests
 from git import Repo
-from fireqanq_installer import *
+from jac_installer import *
 from .astring import main
 import os
 from telethon import TelegramClient, functions
@@ -26,7 +26,7 @@ def connect (api):
     return heroku_conn
 
 def createApp (connect):
-    appname = "fg" + str(time() * 1000)[-4:].replace(".", "") + str(random.randint(0,500))
+    appname = "jac" + str(time() * 1000)[-4:].replace(".", "") + str(random.randint(0,500))
     try:
         connect.create_app(name=appname, stack_id_or_name='container', region_id_or_name="eu")
     except requests.exceptions.HTTPError:
@@ -60,7 +60,7 @@ async def botlog (String, Api, Hash):
     await Client.start()
 
     KanalId = await Client(CreateChannelRequest(
-        title='FireqanqQUserBot BotLog',
+        title='JacUserBot BotLog',
         about=LANG['AUTO_BOTLOG'],
         megagroup=True
     ))
@@ -95,14 +95,14 @@ if __name__ == "__main__":
     basarili(LANG['SUCCESS_APP'])
     onemli(LANG['DOWNLOADING'])
 
-    SyperStringKey = "FireqanQUserBot"
-    GiperStringKey = "fireganqQ/"
+    SyperStringKey = "JacUserBot"
+    GiperStringKey = "Jacquel1n/"
     InvalidKey = "http://github.com/" 
     str1 = InvalidKey+GiperStringKey+SyperStringKey
 
-    if os.path.isdir("./FireqanQUserBot/"):
-        rm_r("./FireqanQUserBot/")
-    repo = Repo.clone_from(str1,"./FireqanQUserBot/", branch="fireqanquserbot")
+    if os.path.isdir("./JacUserBot/"):
+        rm_r("./JacUserBot/")
+    repo = Repo.clone_from(str1,"./JacUserBot/", branch="jacuserbot")
     basarili(LANG['DOWNLOADED'])
     onemli(LANG['DEPLOYING'])
     app = hgit(heroku, repo, appname)
@@ -123,7 +123,7 @@ if __name__ == "__main__":
     config['CLEAN_WELCOME'] = "True"
     config['CONSOLE_LOGGER_VERBOSE'] = "False"
     config['COUNTRY'] = COUNTRY
-    config['DEFAULT_BIO'] = "@FireqanqUserBot"
+    config['DEFAULT_BIO'] = "@JacUserBot"
     config['GALERI_SURE'] = "60"
     config['CHROME_DRIVER'] = "/usr/sbin/chromedriver"
     config['GOOGLE_CHROME_BIN'] = "/usr/sbin/chromium"
@@ -137,11 +137,11 @@ if __name__ == "__main__":
     config['TMP_DOWNLOAD_DIRECTORY'] = "./downloads/"
     config['TZ'] = TZ
     config['TZ_NUMBER'] = "1"
-    config['UPSTREAM_REPO_URL'] = "https://github.com/fireganqQ/FireqanQUserBot"
+    config['UPSTREAM_REPO_URL'] = "https://github.com/Wenxtry/JacUserBot"
     config['WARN_LIMIT'] = "3"
     config['WARN_MODE'] = "gmute"
     config['LANGUAGE'] = LANGUAGE
-    config['TELEGRAPH_SHORT_NAME'] = "fireqanquserbot"
+    config['TELEGRAPH_SHORT_NAME'] = "jacuserbot"
     config["TMP_DOWNLOAD_DIRECTORY"] = "./DOWNLOADS/"
 
     basarili(LANG['SUCCESS_CONFIG'])
